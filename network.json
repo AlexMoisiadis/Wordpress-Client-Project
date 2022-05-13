@@ -1,159 +1,198 @@
-{
+ {
   "nodes": [
     {
-      "id": "Ante Prodan", 
+      "id": 1,
+      "name": "Ante Prodan", 
       "group": 1
     }, 
     {
-      "id": "Jo-An Occhipinti", 
+        "id": 2,
+      "name": "Jo-An Occhipinti", 
       "group": 1
     }, 
     {
-      "id": "Nathaniel Osgood", 
+     "id": 3,
+      "name": "Nathaniel Osgood", 
       "group": 1
     }, 
     {
-      "id": "Paulo Gonçalves", 
+        "id": 4,
+      "name": "Paulo Gonçalves", 
       "group": 1
     }, 
     {
-      "id": "Patricia Mabry", 
+        "id": 5,
+      "name": "Patricia Mabry", 
       "group": 1
     }, 
     {
-      "id": "Robin Purshouse", 
+        "id": 6,
+      "name": "Robin Purshouse", 
       "group": 1
     }, 
     {
-      "id": "Frank Iorfino", 
+        "id": 7,
+      "name": "Frank Iorfino", 
       "group": 1
     }, 
     {
-      "id": "Adam Skinner", 
+        "id": 8,
+      "name": "Adam Skinner", 
       "group": 1
     }, 
     {
-      "id": "Tracey Davenport", 
+        "id": 9,
+      "name": "Tracey Davenport", 
       "group": 1
     }, 
     {
-      "id": "Shelley Rowe", 
+        "id": 10,
+      "name": "Shelley Rowe", 
       "group": 1
     }, 
     {
-      "id": "Julie Sturgess", 
+        "id": 11,
+      "name": "Julie Sturgess", 
       "group": 1
     }, 
     {
-      "id": "Ian Hickie", 
+        "id": 12,
+      "name": "Ian Hickie", 
       "group": 1
     }, 
     {
-      "id": "Danya Rose", 
+        "id": 13,
+      "name": "Danya Rose", 
       "group": 1
     }, 
     {
-      "id": "Daniel Rock", 
+        "id": 14,
+      "name": "Daniel Rock", 
       "group": 1
     }, 
     {
-      "id": "Yun Ju Christine Song", 
+        "id": 15,
+      "name": "Yun Ju Christine Song", 
       "group": 1
     }, 
     {
-      "id": "Sebastian Rosenberg", 
+      "id": 16,
+      "name": "Sebastian Rosenberg", 
       "group": 1
     }, 
     {
-      "id": "Louise Freebairn", 
+        "id": 17,
+      "name": "Louise Freebairn", 
       "group": 1
     }, 
     {
-      "id": "Catherine Vacher", 
+      "id": 18,
+      "name": "Catherine Vacher", 
       "group": 1
     }, 
     {
-      "id": "Andrew Page", 
+        "id": 19,
+      "name": "Andrew Page", 
       "group": 1
     }, 
     {
-      "id": "Geoff McDonnell", 
+        "id": 20,
+      "name": "Geoff McDonnell", 
       "group": 1
     }, 
     {
-      "id": "Mark Heffernan", 
+        "id": 21,
+      "name": "Mark Heffernan", 
       "group": 1
     }, 
     {
-      "id": "Bill Campos", 
+        "id": 22,
+      "name": "Bill Campos", 
       "group": 1
     }, 
     {
-      "id": "Graham Meadows", 
+        "id": 23,
+      "name": "Graham Meadows", 
       "group": 1
     }, 
     {
-      "id": "Dylan Knowles", 
+        "id": 24,
+      "name": "Dylan Knowles", 
       "group": 1
     }, 
     {
-      "id": "John Wiggers", 
+        "id": 25,
+      "name": "John Wiggers", 
       "group": 1
     }, 
     {
-      "id": "Michael Livingston", 
+        "id": 26,
+      "name": "Michael Livingston", 
       "group": 1
     }, 
     {
-      "id": "Robin Room", 
+        "id": 27,
+      "name": "Robin Room", 
       "group": 1
     }, 
     {
-      "id": "Eloise O'Donnell", 
+        "id": 28,
+      "name": "Eloise O'Donnell", 
       "group": 1
     }, 
     {
-      "id": "Sandra Jones", 
+        "id": 29,
+      "name": "Sandra Jones", 
       "group": 1
     }, 
     {
-      "id": "Paul S Haber", 
+        "id": 30,
+      "name": "Paul S Haber", 
       "group": 1
     }, 
     {
-      "id": "David Muscatello", 
+        "id": 31,
+      "name": "Davname Muscatello", 
       "group": 1
     }, 
     {
-      "id": "Nadine Ezard", 
+        "id": 32,
+      "name": "Nadine Ezard", 
       "group": 1
     }, 
     {
-      "id": "Nghi Phung", 
+        "id": 33,
+      "name": "Nghi Phung", 
       "group": 1
     }, 
     {
-      "id": "Devon Indig", 
+        "id": 34,
+      "name": "Devon Indig", 
       "group": 1
     }, 
     {
-      "id": "Lucie Rychetnik", 
+        "id": 35,
+      "name": "Lucie Rychetnik", 
       "group": 1
     }, 
     {
-      "id": "Jaithri Ananthapavan", 
+        "id": 36,
+      "name": "Jaithri Ananthapavan", 
       "group": 1
     }, 
     {
-      "id": "Sonia Wutzke", 
+        "id": 37,
+      "name": "Sonia Wutzke", 
       "group": 1
     }, 
     {
-      "id": "Jan Scott", 
+        "id": 38,
+      "name": "Jan Scott", 
       "group": 1
     }, 
     {
-      "id": "Kirill Glavatsky ", 
+        "id": 39,
+      "name": "Kirill Glavatsky ", 
       "group": 1
     }
   ], 
@@ -290,7 +329,7 @@
     }, 
     {
       "source": "Ante Prodan", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -450,7 +489,7 @@
     }, 
     {
       "source": "Jo-An Occhipinti", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -790,7 +829,7 @@
     }, 
     {
       "source": "Louise Freebairn", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -895,7 +934,7 @@
     }, 
     {
       "source": "Geoff McDonnell", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -975,7 +1014,7 @@
     }, 
     {
       "source": "Dylan Knowles", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -1035,7 +1074,7 @@
     }, 
     {
       "source": "John Wiggers", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -1090,7 +1129,7 @@
     }, 
     {
       "source": "Michael Livingston", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -1140,7 +1179,7 @@
     }, 
     {
       "source": "Robin Room", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -1185,7 +1224,7 @@
     }, 
     {
       "source": "Eloise O'Donnell", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -1225,7 +1264,7 @@
     }, 
     {
       "source": "Sandra Jones", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -1260,7 +1299,7 @@
     }, 
     {
       "source": "Paul S Haber", 
-      "target": "David Muscatello", 
+      "target": "Davname Muscatello", 
       "value": 1
     }, 
     {
@@ -1294,32 +1333,32 @@
       "value": 1
     }, 
     {
-      "source": "David Muscatello", 
+      "source": "Davname Muscatello", 
       "target": "Nadine Ezard", 
       "value": 1
     }, 
     {
-      "source": "David Muscatello", 
+      "source": "Davname Muscatello", 
       "target": "Nghi Phung", 
       "value": 1
     }, 
     {
-      "source": "David Muscatello", 
+      "source": "Davname Muscatello", 
       "target": "Devon Indig", 
       "value": 1
     }, 
     {
-      "source": "David Muscatello", 
+      "source": "Davname Muscatello", 
       "target": "Lucie Rychetnik", 
       "value": 1
     }, 
     {
-      "source": "David Muscatello", 
+      "source": "Davname Muscatello", 
       "target": "Jaithri Ananthapavan", 
       "value": 1
     }, 
     {
-      "source": "David Muscatello", 
+      "source": "Davname Muscatello", 
       "target": "Sonia Wutzke", 
       "value": 1
     }, 
