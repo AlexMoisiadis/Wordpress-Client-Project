@@ -562,11 +562,7 @@
       "target": 38, 
       "weight": 1
     }, 
-    {
-      "source": 7, 
-      "target": 39, 
-      "weight": 1
-    }, 
+    
     {
       "source": 8, 
       "target": 9, 
@@ -705,11 +701,6 @@
     {
       "source": 12, 
       "target": 38, 
-      "weight": 1
-    }, 
-    {
-      "source": 12, 
-      "target": 39, 
       "weight": 1
     }, 
     {
@@ -1437,10 +1428,5 @@
       "target": 37, 
       "weight": 1
     }, 
-    {
-      "source": 38, 
-      "target": 39, 
-      "weight": 1
-    }
   ]
 }
