@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v2.min.js?2.9.3"></script>
+<style>
+
+.link {
+  stroke: #aaa;
+  opacity: 0.5;
+}
+
+.node text {
+font-weight: bold;
+cursor:pointer;
+}
+
+.node circle{
+stroke:#fff;
+stroke-width:3px;
+fill:#555;
+}
+
+</style>
+<body>
+<script>
+
+var width = 1920,
+    height = 1080
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var force = d3.layout.force()
+    .gravity(.03)
+    .distance(350)
+    .charge(-150)
+    .size([width, height]);
+
+d3.json("https://raw.githubusercontent.com/AlexMoisiadis/testpub/main/network.json", function (d) {
+
+
+    console.log(d.nodes)
+    console.log(d.links)
+    
+    d.links.forEach(function(link, index, list) {
+        if (typeof d.nodes[link.source] === 'undefined') {
+            console.log('undefined source', link);
+        }
+        if (typeof d.nodes[link.target] === 'undefined') {
+            console.log('undefined target', link);
+        }
+    });
+  force
+      .nodes(d.nodes)
+      .links(d.links)
+      .start();
+
+  var link = svg.selectAll(".link")
+      .data(d.links)
+    .enter()
+    .append("line")
+      .attr("class", "link")
+    .style("stroke-width", function(d) { return Math.sqrt(d.weight); });
+
+  var node = svg.selectAll(".node")
+      .data(d.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .call(force.drag)
+      .on("click", function(d) {window.open(d.url)});
+
+  node.append("image")
+      .attr("xlink:href", "https://github.com/favicon.ico")
+      .attr("x", -8)
+      .attr("y", -8)
+      .attr("width", 16)
+      .attr("height", 16);
+
+var linkCount;
+d.links.forEach(function(link){
+
+  // initialize a new property on the node
+  if (!link.source["linkCount"]) link.source["linkCount"] = 0; 
+  if (!link.target["linkCount"]) link.target["linkCount"] = 0;
+
+  // count it up
+  link.source["linkCount"]++;
+  link.target["linkCount"]++;    
+});
+
+
+      
+     
+
+  node.append("text")
+      .attr("dx", linkCount)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name });
+
+  force.on("tick", function() {
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  });
+});
+
+</script>
