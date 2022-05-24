@@ -35,199 +35,199 @@
       "name": "Robin Purshouse", 
       "url": "http://www.csart-world.com/2019/07/robin-purshouse/",
       "group": 1
-    }, 
-    {
-        "id": 7,
-      "name": "Frank Iorfino", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 8,
-      "name": "Adam Skinner", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 9,
-      "name": "Tracey Davenport", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 10,
-      "name": "Shelley Rowe", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 11,
-      "name": "Julie Sturgess", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 12,
-      "name": "Ian Hickie", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 13,
-      "name": "Danya Rose", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 14,
-      "name": "Daniel Rock", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 15,
-      "name": "Yun Ju Christine Song", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-      "id": 16,
-      "name": "Sebastian Rosenberg", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 17,
-      "name": "Louise Freebairn", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-      "id": 18,
-      "name": "Catherine Vacher", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 19,
-      "name": "Andrew Page", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 20,
-      "name": "Geoff McDonnell",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 21,
-      "name": "Mark Heffernan", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 22,
-      "name": "Bill Campos", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
+    },
+  {
+    "id": 7,
+    "name": "Frank Iorfino",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/frank-iorfino.html",
+    "group": 1
+  },
+  {
+    "id": 8,
+    "name": "Adam Skinner",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/adam-skinner.html",
+    "group": 1
+  },
+  {
+    "id": 9,
+    "name": "Tracey Davenport",
+    "url": "https://au.linkedin.com/in/tracey-davenport-3261662a",
+    "group": 1
+  },
+  {
+    "id": 10,
+    "name": "Shelley Rowe",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8274674/",
+    "group": 1
+  },
+  {
+    "id": 11,
+    "name": "Julie Sturgess",
+    "url": "https://au.linkedin.com/in/julie-sturgess-8a546015",
+    "group": 1
+  },
+  {
+    "id": 12,
+    "name": "Ian Hickie",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/ian-hickie.html",
+    "group": 1
+  },
+  {
+    "id": 13,
+    "name": "Danya Rose",
+    "url": "https://www.sydney.edu.au/science/about/our-people/academic-staff/danya-rose.html",
+    "group": 1
+  },
+  {
+    "id": 14,
+    "name": "Daniel Rock",
+    "url": "https://researchdirect.westernsydney.edu.au/islandora/object/uws:62659/datastream/PDF/view",
+    "group": 1
+  },
+  {
+    "id": 15,
+    "name": "Yun Ju Christine Song",
+    "url": "https://www.researchgate.net/scientific-contributions/Yun-Ju-Christine-Song-2130718997",
+    "group": 1
+  },
+  {
+    "id": 16,
+    "name": "Sebastian Rosenberg",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/sebastian-rosenberg.html",
+    "group": 1
+  },
+  {
+    "id": 17,
+    "name": "Louise Freebairn",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/louise-freebairn.html",
+    "group": 1
+  },
+  {
+    "id": 18,
+    "name": "Catherine Vacher",
+    "url": "https://www.mdpi.com/1660-4601/19/3/1468",
+    "group": 1
+  },
+  {
+    "id": 19,
+    "name": "Andrew Page",
+    "url": "https://preventioncentre.org.au/people/andrew-page/",
+    "group": 1
+  },
+  {
+    "id": 20,
+    "name": "Geoff McDonnell",
+    "url": "http://www.csart-world.com/2019/07/lowering-alcohols-harm-modeling-the-impact-of-interventions/",
+    "group": 1
+  },
+  {
+    "id": 21,
+    "name": "Mark Heffernan",
+    "url": "http://www.csart-world.com/2019/07/lowering-alcohols-harm-modeling-the-impact-of-interventions/",
+    "group": 1
+  },
+  {
+    "id": 22,
+    "name": "Bill Campos",
+    "url": "https://www.sydney.edu.au/brain-mind/our-research/youth-mental-health-and-technology.html",
+    "group": 1
+  }, 
     {
         "id": 23,
       "name": "Graham Meadows",
       "url": "https://research.monash.edu/en/persons/graham-meadows", 
       "group": 1
-    }, 
-    {
-        "id": 24,
-      "name": "Dylan Knowles", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 25,
-      "name": "John Wiggers", 
-      "url": "http://www.csart-world.com/",
-      "group": 1
-    }, 
-    {
-        "id": 26,
-      "name": "Michael Livingston",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 27,
-      "name": "Robin Room",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 28,
-      "name": "Eloise O'Donnell",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 29,
-      "name": "Sandra Jones",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 30,
-      "name": "Paul S Haber",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
+    },
+  {
+    "id": 24,
+    "name": "Dylan Knowles",
+    "url": "https://link.springer.com/article/10.1007/s00038-017-1041-y",
+    "group": 1
+  },
+  {
+    "id": 25,
+    "name": "John Wiggers",
+    "url": "https://www.newcastle.edu.au/profile/john-wiggers",
+    "group": 1
+  },
+  {
+    "id": 26,
+    "name": "Michael Livingston",
+    "url": "https://au.linkedin.com/in/michael-livingston-4a2b51102",
+    "group": 1
+  },
+  {
+    "id": 27,
+    "name": "Robin Room",
+    "url": "https://en.wikipedia.org/wiki/Robin_Room",
+    "group": 1
+  },
+  {
+    "id": 28,
+    "name": "Eloise O'Donnell",
+    "url": "https://au.linkedin.com/in/eloiseodonnell",
+    "group": 1
+  },
+  {
+    "id": 29,
+    "name": "Sandra Jones",
+    "url": "https://rexr.acu.edu.au/framework/browse.php?srperid=8060",
+    "group": 1
+  },
+  {
+    "id": 30,
+    "name": "Paul S Haber",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/paul-haber.html",
+    "group": 1
+  }, 
     {
         "id": 31,
       "name": "Davname Muscatello",
       "url": "http://www.csart-world.com/", 
       "group": 1
-    }, 
-    {
-        "id": 32,
-      "name": "Nadine Ezard",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 33,
-      "name": "Nghi Phung",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 34,
-      "name": "Devon Indig",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 35,
-      "name": "Lucie Rychetnik",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 36,
-      "name": "Jaithri Ananthapavan",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 37,
-      "name": "Sonia Wutzke",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
-    {
-        "id": 38,
-      "name": "Jan Scott",
-      "url": "http://www.csart-world.com/", 
-      "group": 1
-    }, 
+    },
+  {
+    "id": 32,
+    "name": "Nadine Ezard",
+    "url": "https://research.unsw.edu.au/people/dr-nadine-ezard/publications",
+    "group": 1
+  },
+  {
+    "id": 33,
+    "name": "Nghi Phung",
+    "url": "https://link.springer.com/article/10.1007/s00038-017-1041-y",
+    "group": 1
+  },
+  {
+    "id": 34,
+    "name": "Devon Indig",
+    "url": "https://med.unsw.edu.au/our-people/devon-indig",
+    "group": 1
+  },
+  {
+    "id": 35,
+    "name": "Lucie Rychetnik",
+    "url": "https://www.researchgate.net/scientific-contributions/Lucie-Rychetnik-15886341",
+    "group": 1
+  },
+  {
+    "id": 36,
+    "name": "Jaithri Ananthapavan",
+    "url": "https://www.deakin.edu.au/about-deakin/people/jaithri-ananthapavan",
+    "group": 1
+  },
+  {
+    "id": 37,
+    "name": "Sonia Wutzke",
+    "url": "https://preventioncentre.org.au/people/sonia-wutzke/",
+    "group": 1
+  },
+  {
+    "id": 38,
+    "name": "Jan Scott",
+    "url": "https://www.sydney.edu.au/brain-mind/our-research/youth-mental-health-and-technology.html",
+    "group": 1
+  }, 
     {
         "id": 39,
       "name": "Kirill Glavatsky",
