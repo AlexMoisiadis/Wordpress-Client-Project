@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+   
+  </head>
+<style>
+
+.link {
+  stroke: #aaa;
+  opacity: 1;
+}
+
+.node text {
+
+ font-family: sans-serif;
+  
+cursor:pointer;
+}
+
+.node circle{
+stroke:#fff;
+stroke-width:3px;
+fill:#555;
+}
+
+</style>
+  <body>
+    Filter: <input type="text" name="filter" id="filter"/>
+    <div>
+      <svg width="1000" height="1000"></svg>
+    </div>
+    <script>
+	
+	function getData()
+	{
+	return  {
+ "nodes": [
+    {
+      "id": 1,
+      "name": "Ante Prodan", 
+      "url": "http://www.csart-world.com/2019/07/ante-prodan/",
+      "group": 1
+    }, 
+    {
+        "id": 2,
+      "name": "Jo-An Occhipinti", 
+      "url": "http://www.csart-world.com/2019/07/jo-an-atkinson/",
+      "group": 1
+    }, 
+    {
+     "id": 3,
+      "name": "Nathaniel Osgood", 
+      "url": "http://www.csart-world.com/2019/07/nathaniel-osgood/",
+      "group": 1
+    }, 
+    {
+        "id": 4,
+      "name": "Paulo Gonçalves", 
+      "url": "http://www.csart-world.com/2019/07/paulo-goncalves/",
+      "group": 1
+    }, 
+    {
+        "id": 5,
+      "name": "Patricia Mabry", 
+      "url": "http://www.csart-world.com/2019/07/patricia-mabry/",
+      "group": 1
+    }, 
+    {
+        "id": 6,
+      "name": "Robin Purshouse", 
+      "url": "http://www.csart-world.com/2019/07/robin-purshouse/",
+      "group": 1
+    },
+  {
+    "id": 7,
+    "name": "Frank Iorfino",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/frank-iorfino.html",
+    "group": 1
+  },
+  {
+    "id": 8,
+    "name": "Adam Skinner",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/adam-skinner.html",
+    "group": 1
+  },
+  {
+    "id": 9,
+    "name": "Tracey Davenport",
+    "url": "https://au.linkedin.com/in/tracey-davenport-3261662a",
+    "group": 1
+  },
+  {
+    "id": 10,
+    "name": "Shelley Rowe",
+    "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8274674/",
+    "group": 1
+  },
+  {
+    "id": 11,
+    "name": "Julie Sturgess",
+    "url": "https://au.linkedin.com/in/julie-sturgess-8a546015",
+    "group": 1
+  },
+  {
+    "id": 12,
+    "name": "Ian Hickie",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/ian-hickie.html",
+    "group": 1
+  },
+  {
+    "id": 13,
+    "name": "Danya Rose",
+    "url": "https://www.sydney.edu.au/science/about/our-people/academic-staff/danya-rose.html",
+    "group": 1
+  },
+  {
+    "id": 14,
+    "name": "Daniel Rock",
+    "url": "https://researchdirect.westernsydney.edu.au/islandora/object/uws:62659/datastream/PDF/view",
+    "group": 1
+  },
+  {
+    "id": 15,
+    "name": "Yun Ju Christine Song",
+    "url": "https://www.researchgate.net/scientific-contributions/Yun-Ju-Christine-Song-2130718997",
+    "group": 1
+  },
+  {
+    "id": 16,
+    "name": "Sebastian Rosenberg",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/sebastian-rosenberg.html",
+    "group": 1
+  },
+  {
+    "id": 17,
+    "name": "Louise Freebairn",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/louise-freebairn.html",
+    "group": 1
+  },
+  {
+    "id": 18,
+    "name": "Catherine Vacher",
+    "url": "https://www.mdpi.com/1660-4601/19/3/1468",
+    "group": 1
+  },
+  {
+    "id": 19,
+    "name": "Andrew Page",
+    "url": "https://preventioncentre.org.au/people/andrew-page/",
+    "group": 1
+  },
+  {
+    "id": 20,
+    "name": "Geoff McDonnell",
+    "url": "http://www.csart-world.com/2019/07/lowering-alcohols-harm-modeling-the-impact-of-interventions/",
+    "group": 1
+  },
+  {
+    "id": 21,
+    "name": "Mark Heffernan",
+    "url": "http://www.csart-world.com/2019/07/lowering-alcohols-harm-modeling-the-impact-of-interventions/",
+    "group": 1
+  },
+  {
+    "id": 22,
+    "name": "Bill Campos",
+    "url": "https://www.sydney.edu.au/brain-mind/our-research/youth-mental-health-and-technology.html",
+    "group": 1
+  }, 
+    {
+        "id": 23,
+      "name": "Graham Meadows",
+      "url": "https://research.monash.edu/en/persons/graham-meadows", 
+      "group": 1
+    },
+  {
+    "id": 24,
+    "name": "Dylan Knowles",
+    "url": "https://link.springer.com/article/10.1007/s00038-017-1041-y",
+    "group": 1
+  },
+  {
+    "id": 25,
+    "name": "John Wiggers",
+    "url": "https://www.newcastle.edu.au/profile/john-wiggers",
+    "group": 1
+  },
+  {
+    "id": 26,
+    "name": "Michael Livingston",
+    "url": "https://au.linkedin.com/in/michael-livingston-4a2b51102",
+    "group": 1
+  },
+  {
+    "id": 27,
+    "name": "Robin Room",
+    "url": "https://en.wikipedia.org/wiki/Robin_Room",
+    "group": 1
+  },
+  {
+    "id": 28,
+    "name": "Eloise O'Donnell",
+    "url": "https://au.linkedin.com/in/eloiseodonnell",
+    "group": 1
+  },
+  {
+    "id": 29,
+    "name": "Sandra Jones",
+    "url": "https://rexr.acu.edu.au/framework/browse.php?srperid=8060",
+    "group": 1
+  },
+  {
+    "id": 30,
+    "name": "Paul S Haber",
+    "url": "https://www.sydney.edu.au/medicine-health/about/our-people/academic-staff/paul-haber.html",
+    "group": 1
+  }, 
+    {
+        "id": 31,
+      "name": "Davname Muscatello",
+      "url": "http://www.csart-world.com/", 
+      "group": 1
+    },
+  {
+    "id": 32,
+    "name": "Nadine Ezard",
+    "url": "https://research.unsw.edu.au/people/dr-nadine-ezard/publications",
+    "group": 1
+  },
+  {
+    "id": 33,
+    "name": "Nghi Phung",
+    "url": "https://link.springer.com/article/10.1007/s00038-017-1041-y",
+    "group": 1
+  },
+  {
+    "id": 34,
+    "name": "Devon Indig",
+    "url": "https://med.unsw.edu.au/our-people/devon-indig",
+    "group": 1
+  },
+  {
+    "id": 35,
+    "name": "Lucie Rychetnik",
+    "url": "https://www.researchgate.net/scientific-contributions/Lucie-Rychetnik-15886341",
+    "group": 1
+  },
+  {
+    "id": 36,
+    "name": "Jaithri Ananthapavan",
+    "url": "https://www.deakin.edu.au/about-deakin/people/jaithri-ananthapavan",
+    "group": 1
+  },
+  {
+    "id": 37,
+    "name": "Sonia Wutzke",
+    "url": "https://preventioncentre.org.au/people/sonia-wutzke/",
+    "group": 1
+  },
+  {
+    "id": 38,
+    "name": "Jan Scott",
+    "url": "https://www.sydney.edu.au/brain-mind/our-research/youth-mental-health-and-technology.html",
+    "group": 1
+  }, 
+    {
+        "id": 39,
+      "name": "Kirill Glavatsky",
+      "url": "http://www.csart-world.com/",
+      "group": 1
+    }
+  ], 
+ "links": [
+    {
+      "source": 1, 
+      "target": 2, 
+      "weight": 5
+    }, 
+    {
+      "source": 1, 
+      "target": 3, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 7, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 8, 
+      "weight": 2
+    }, 
+    {
+      "source": 1, 
+      "target": 9, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 10, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 11, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 12, 
+      "weight": 3
+    }, 
+    {
+      "source": 1, 
+      "target": 13, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 14, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 15, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 16, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 17, 
+      "weight": 2
+    }, 
+    {
+      "source": 1, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 19, 
+      "weight": 2
+    }, 
+    {
+      "source": 1, 
+      "target": 20, 
+      "weight": 3
+    }, 
+    {
+      "source": 1, 
+      "target": 21, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 22, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 23, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 24, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 25, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 26, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 27, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 1, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 3, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 7, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 8, 
+      "weight": 2
+    }, 
+    {
+      "source": 2, 
+      "target": 9, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 10, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 11, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 12, 
+      "weight": 3
+    }, 
+    {
+      "source": 2, 
+      "target": 13, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 14, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 15, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 16, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 17, 
+      "weight": 2
+    }, 
+    {
+      "source": 2, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 19, 
+      "weight": 2
+    }, 
+    {
+      "source": 2, 
+      "target": 20, 
+      "weight": 3
+    }, 
+    {
+      "source": 2, 
+      "target": 21, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 22, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 23, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 24, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 25, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 26, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 27, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 2, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 3, 
+      "target": 19, 
+      "weight": 1
+    }, 
+    {
+      "source": 3, 
+      "target": 20, 
+      "weight": 1
+    }, 
+    {
+      "source": 7, 
+      "target": 8, 
+      "weight": 1
+    }, 
+    {
+      "source": 7, 
+      "target": 9, 
+      "weight": 1
+    }, 
+    {
+      "source": 7, 
+      "target": 10, 
+      "weight": 1
+    }, 
+    {
+      "source": 7, 
+      "target": 11, 
+      "weight": 1
+    }, 
+    {
+      "source": 7, 
+      "target": 12, 
+      "weight": 2
+    }, 
+    {
+      "source": 7, 
+      "target": 38, 
+      "weight": 1
+    }, 
+    
+    {
+      "source": 8, 
+      "target": 9, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 10, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 11, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 12, 
+      "weight": 2
+    }, 
+    {
+      "source": 8, 
+      "target": 13, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 14, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 15, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 16, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 17, 
+      "weight": 1
+    }, 
+    {
+      "source": 8, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 9, 
+      "target": 10, 
+      "weight": 1
+    }, 
+    {
+      "source": 9, 
+      "target": 11, 
+      "weight": 1
+    }, 
+    {
+      "source": 9, 
+      "target": 12, 
+      "weight": 1
+    }, 
+    {
+      "source": 10, 
+      "target": 11, 
+      "weight": 1
+    }, 
+    {
+      "source": 10, 
+      "target": 12, 
+      "weight": 1
+    }, 
+    {
+      "source": 11, 
+      "target": 12, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 13, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 14, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 15, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 16, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 17, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 19, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 20, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 21, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 22, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 23, 
+      "weight": 1
+    }, 
+    {
+      "source": 12, 
+      "target": 38, 
+      "weight": 1
+    }, 
+    {
+      "source": 13, 
+      "target": 14, 
+      "weight": 1
+    }, 
+    {
+      "source": 13, 
+      "target": 15, 
+      "weight": 1
+    }, 
+    {
+      "source": 13, 
+      "target": 16, 
+      "weight": 1
+    }, 
+    {
+      "source": 13, 
+      "target": 17, 
+      "weight": 1
+    }, 
+    {
+      "source": 13, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 14, 
+      "target": 15, 
+      "weight": 1
+    }, 
+    {
+      "source": 14, 
+      "target": 16, 
+      "weight": 1
+    }, 
+    {
+      "source": 14, 
+      "target": 17, 
+      "weight": 1
+    }, 
+    {
+      "source": 14, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 15, 
+      "target": 16, 
+      "weight": 1
+    }, 
+    {
+      "source": 15, 
+      "target": 17, 
+      "weight": 1
+    }, 
+    {
+      "source": 15, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 16, 
+      "target": 17, 
+      "weight": 1
+    }, 
+    {
+      "source": 16, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 18, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 20, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 24, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 25, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 26, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 27, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 17, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 19, 
+      "target": 20, 
+      "weight": 2
+    }, 
+    {
+      "source": 19, 
+      "target": 21, 
+      "weight": 1
+    }, 
+    {
+      "source": 19, 
+      "target": 22, 
+      "weight": 1
+    }, 
+    {
+      "source": 19, 
+      "target": 23, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 21, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 22, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 23, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 24, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 25, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 26, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 27, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 20, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 21, 
+      "target": 22, 
+      "weight": 1
+    }, 
+    {
+      "source": 21, 
+      "target": 23, 
+      "weight": 1
+    }, 
+    {
+      "source": 22, 
+      "target": 23, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 25, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 26, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 27, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 24, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 26, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 27, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 25, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 27, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 26, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 28, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 27, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 29, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 28, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 30, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 29, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 30, 
+      "target": 31, 
+      "weight": 1
+    }, 
+    {
+      "source": 30, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 30, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 30, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 30, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 30, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 30, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 31, 
+      "target": 32, 
+      "weight": 1
+    }, 
+    {
+      "source": 31, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 31, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 31, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 31, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 31, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 32, 
+      "target": 33, 
+      "weight": 1
+    }, 
+    {
+      "source": 32, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 32, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 32, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 32, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 33, 
+      "target": 34, 
+      "weight": 1
+    }, 
+    {
+      "source": 33, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 33, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 33, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 34, 
+      "target": 35, 
+      "weight": 1
+    }, 
+    {
+      "source": 34, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 34, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 35, 
+      "target": 36, 
+      "weight": 1
+    }, 
+    {
+      "source": 35, 
+      "target": 37, 
+      "weight": 1
+    }, 
+    {
+      "source": 36, 
+      "target": 37, 
+      "weight": 1
+    } 
+  ]
+};
+	
+	
+	
+	
+	}
+		
+	var graph = getData();
+	var store = Object.assign({}, graph);
+	var svg = d3.select("svg"),
+	width = +svg.attr("width"),
+	height = +svg.attr("height");
+  
+
+var color = d3.scaleOrdinal(d3.schemeCategory10);
+var zoom_handler = d3.zoom().on("zoom", zoom_actions);
+var linkElements, nodeElements, textElements, grads;
+// zoom_handler(svg);
+
+var simulation = d3.forceSimulation()
+  .force("link", d3.forceLink().distance(700).id(function(d) {
+    return d.id;
+  }))
+  .force("charge", d3.forceManyBody().strength(-1000))
+  
+  .force("center", d3.forceCenter(width / 2, height / 2));
+
+var g = svg.append("g")
+  .attr("class", "everything");
+
+svg.call(zoom_handler)
+  .call(zoom_handler.transform, d3.zoomIdentity.translate(200, 150).scale(0.2));
+  
+linkElements = svg.append("g").selectAll(".link"),
+nodeElements = svg.append("g").selectAll(".nodes");
+grads = svg.append("g").selectAll(".grads");
+textElements = svg.append("g").selectAll(".texts");
+drawGraph();
+
+
+function drawGraph() {
+  nodeElements = nodeElements.data(graph.nodes, function(d) { return d.id;});
+	nodeElements.exit().remove();
+  nodeElements =  g.append("g")
+    .attr("class", "nodes")
+    .selectAll("circle")
+    .data(graph.nodes)
+    .enter().append("circle")
+    .attr("r", 60)
+    .attr("stroke", "#fff")
+    .attr('stroke-width', 21)
+    .attr("id", function(d) { return d.id })
+       .attr('fill', function(d, i) { return 'url(#grad' + i + ')'; })
+        .on('mouseover', selectNode)
+        .on('mouseout', releaseNode)
+    .call(d3.drag()
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended));
+      
+  textElements = textElements.data(graph.nodes, function(d) { return d.id;});
+	textElements.exit().remove();   
+  textElements = g.append("g")    // use g.append instead of svg.append to enable zoom
+    .attr("class", "texts")
+    .selectAll("text")
+    .data(graph.nodes)
+    .enter().append("text")
+      .attr("text-anchor", "end")
+    .text(function(node) {
+      return node.id
+    })
+    .attr("font-size", 55)
+    .attr("font-family", "sans-serif")
+    .attr("fill", "black")
+    .attr("style", "font-weight:bold;")
+    .attr("dx", 30)
+    .attr("dy", 80)
+    
+  grads = linkElements.data(graph.nodes, function(d) { return d.id;});
+	grads.exit().remove();  
+  grads = svg.append("defs").selectAll("radialGradient")
+    .attr("class", "grads")
+    .data(graph.nodes)
+    .enter()
+    .append("radialGradient")
+    .attr("gradientUnits", "objectBoundingBox")
+    .attr("cx", 0)
+    .attr("fill", function(d) { return color(d.id); })
+    .attr("cy", 0)
+    .attr("r", "100%")
+    .attr("id", function(d, i) { return "grad" + i; });
+ 
+  grads.append("stop")
+    .attr("offset", "0%")
+    .style("stop-color", "white");
+ 
+  grads.append("stop")
+    .attr("offset", "100%")
+    .style("stop-color",  function(d) { return color(d.id); });
+    
+    
+  linkElements = linkElements.data(graph.links, function(d) { return d.id;});
+	linkElements.exit().remove();  
+  linkElements = g.append("g")
+    .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter().append("line")
+    .style("stroke-width",5.5)
+     .style("stroke", "grey")
+}  
+  
+  
+function ticked() {
+  linkElements
+    .attr("x1", function(d) { return d.source.x; })
+    .attr("y1", function(d) { return d.source.y; })
+    .attr("x2", function(d) { return d.target.x; })
+    .attr("y2", function(d) { return d.target.y; });
+  nodeElements
+    .attr("cx", function(d) { return d.x; })
+    .attr("cy", function(d) { return d.y; })
+    .each(d => { d3.select('#t_' + d.id).attr('x', d.x + 10).attr('y', d.y + 3); });
+  textElements
+    .attr('x', function(d) {
+      return d.x
+    })
+    .attr('y', function(d) {
+      return d.y
+    });
+}
+
+simulation
+  .nodes(graph.nodes)
+  .on("tick", ticked);
+
+simulation.force("link")
+  .links(graph.links);
+
+
+function zoom_actions() {
+  g.attr("transform", d3.event.transform)
+}
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+function selectNode(selectedNode) {
+  var neighbors = getNeighbors(selectedNode)
+
+  nodeElements.transition().duration(500)
+  .attr('r', function(node) {
+     	return getNodeRadius(node,neighbors);
+   });
+    
+   nodeElements.attr('fill', function(node) {
+     	return getNodeColor(node,neighbors,selectedNode);
+   })
+   
+      
+   textElements.transition().duration(500).style('font-size', function(node) {
+    return getTextColor(node, neighbors)
+  })
+ 
+  linkElements.transition().duration(500).style('stroke', function(link) {
+    return getLinkColor(selectedNode, link)
+  })
+}
+
+function releaseNode() {
+nodeElements.transition().duration(500)
+   .attr('r', 60);
+nodeElements.attr('fill', function(d, i) { return 'url(#grad' + i + ')'; })
+
+   linkElements.style('stroke', 'grey');
+     textElements.style('font-size', '25px');
+
+
+}
+
+
+function getNeighbors(node) {
+  return graph.links.reduce(function(neighbors, link) {
+    if (link.target.id === node.id) {
+      neighbors.push(link.source.id)
+    } else if (link.source.id === node.id) {
+      neighbors.push(link.target.id)
+    }
+    return neighbors
+  }, [node.id])
+}
+
+function getNodeColor(node, neighbors, selectedNode) {
+  // If is neighbor
+  if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
+    return 'url(#grad' + selectedNode.index + ')'
+    // return node.level === 1 ? '#9C4A9C' : 'rgba(251, 130, 30, 1)'
+  }  else {
+      return 'url(#grad' + node.index + ')'
+  }
+  //return node.level === 0 ? '#91007B' : '#D8ABD8'
+}
+
+
+
+function getNodeRadius(node, neighbors) {
+  // If is neighbor
+  if ( neighbors.indexOf(node.id) > -1) {
+    return '100'
+  } 
+  else {
+        return '60'
+  }
+}
+
+function getLinkColor(selectedNode, link) {
+  return isNeighborLink(selectedNode, link) ? 'grey' : 'grey';
+}
+
+
+
+function isNeighborLink(node, link) {
+  return link.target.id === node.id || link.source.id === node.id
+}
+
+function getTextColor(node, neighbors) {
+  return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1 ? '40px' : '25px'
+}
+
+var filter = document.querySelector('#filter');
+filter.addEventListener('change', function(event) {
+  filterData(event.target.value);
+  drawGraph();
+  return false;
+})
+
+function filterData(id) {
+    graph = Object.assign({}, store);
+    graph.nodes = [];
+    graph.links = [];
+    dummyStore = [id];
+    store.links.forEach(function(link) {
+  			if(link.source.id === id) {
+  			    graph.links.push(link);
+  			    dummyStore.push(link.target.id);
+  			} else if (link.target.id === id) {
+  			    graph.links.push(link);
+  			    dummyStore.push(link.source.id)
+  			}
+		});
+		store.nodes.forEach(function(node) {
+		    if (dummyStore.includes(node.id)) {
+		        graph.nodes.push(node);
+		    }
+		})
+	}</script>
+  </body>
+</html>
